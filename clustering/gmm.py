@@ -1,5 +1,11 @@
 import numpy as np
 
+"""
+### weakness:
+1. not able to handle the cov singularity issue while updating
+2. its work fine when n_feature <= 2, when we increase it to more than 2 cov determinant become zero.
+"""
+
 class GaussianMixture:
     def __init__(self, n_clusters, iterations = 30, debug=False):
         self.n_clusters = n_clusters
